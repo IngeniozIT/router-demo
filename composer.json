@@ -1,0 +1,41 @@
+{
+    "name": "ingenioz-it/router-demo",
+    "description": "A demo for the router",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "IngeniozIT",
+            "email": "contact@ingenioz.it"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.2",
+        "ingenioz-it/router": "^2.0",
+        "ingenioz-it/http-message": "^2.0",
+        "ingenioz-it/edict": "^3.1",
+        "ingenioz-it/clock": "^1.0",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8080 index.php"
+        ]
+    },
+    "scripts-descriptions": {
+        "serve": "Run a local web server"
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    }
+}
